@@ -10,7 +10,6 @@ colors = ("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple",
 animals = ("Lobster", "Cat", "Duck", "Lizard", "Fish", "Bird", "Octopus",
            "Axolotl", "Fox", "Rooster")
 
-
 class Client(discord.Client):
     def get_members(self):
         membs = []
