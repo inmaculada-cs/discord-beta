@@ -1,8 +1,8 @@
 import discord
-from utils import random_groups, random_name
+from utils import random_groups, random_names
 from datetime import datetime
 
-TOKEN = "OTY2NTE2Nzc5ODQ3NDAxNTMy.YmC45Q.ix0BajepTYI6HiE0sghX3O3uC74"
+TOKEN = "OTY2NTE2Nzc5ODQ3NDAxNTMy.Gv__2s.vQdfgXDRGF23rJPeIlO4VHF78_d4Ouar_jKqyw"
 
 colors = ("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "Pink", "White", "Black")
 animals = ("Lobster", "Cat", "Duck", "Lizard", "Fish", "Bird", "Octopus", "Axolotl", "Fox", "Rooster")
@@ -38,10 +38,10 @@ class Client(discord.Client):
             else:
                 await message.channel.send("No reconocí este comando.")
 
-# intents = discord.Intents.default()
-# intents.members = True
-# client = Client(intents=intents)
-# client.run(TOKEN)
+intents = discord.Intents.default()
+intents.members = True
+client = Client(intents=intents)
+client.run(TOKEN)
 
 print(datetime.now())
 
