@@ -5,7 +5,7 @@ from datetime import datetime
 TOKEN = "OTY2NTE2Nzc5ODQ3NDAxNTMy.Gv__2s.vQdfgXDRGF23rJPeIlO4VHF78_d4Ouar_jKqyw"
 
 colors = ("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "Pink", "White", "Black")
-animals = ("Lobster", "Cat", "Duck", "Lizard", "Fish", "Bird", "Octopus", "Axolotl", "Fox", "Rooster")
+animals = ("Lobster", "Cat", "Duck", "Lizard", "Fish", "Bird", "Octopus", "Axolotl", "Fox", "Rooster", "si" )
 
 class Client(discord.Client):
     def get_members(self):
