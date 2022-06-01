@@ -1,23 +1,26 @@
 import discord
 from utils import random_groups, random_names
 from datetime import datetime
+import os
 
-TOKEN = "OTY2NTE2Nzc5ODQ3NDAxNTMy.Gv__2s.vQdfgXDRGF23rJPeIlO4VHF78_d4Ouar_jKqyw"
+TOKEN = os.environ["discord_token"]
 
-colors = ("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "Pink", "White", "Black")
-animals = ("Lobster", "Cat", "Duck", "Lizard", "Fish", "Bird", "Octopus", "Axolotl", "Fox", "Rooster", "si" )
+colors = ("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple",
+          "Pink", "White", "Black")
+animals = ("Lobster", "Cat", "Duck", "Lizard", "Fish", "Bird", "Octopus",
+           "Axolotl", "Fox", "Rooster")
 
 class Client(discord.Client):
     def get_members(self):
-      membs = []
-      for guild in self.guilds:
-          for member in guild.members:
-              membs.append(str(member))
-      return membs
+        membs = []
+        for guild in self.guilds:
+            for member in guild.members:
+                membs.append(str(member))
+        return membs
 
     async def on_ready(self):
         print('si', self.user)
-  
+
     async def on_message(self, message):
         if message.author == self.user:
             return
@@ -32,11 +35,12 @@ class Client(discord.Client):
             if command == "classmates":
                 await message.channel.send(self.get_members())
             #elif command == "random_groups":
-                #await message.channel.send(random_groups(self.get_members(), 5))
+            #await message.channel.send(random_groups(self.get_members(), 5))
             #elif command == "random_names":
-                #await message.channel.send(random_names(random_groups(self.get_members(), 4)))
+            #await message.channel.send(random_names(random_groups(self.get_members(), 4)))
             else:
                 await message.channel.send("No reconocí este comando.")
+
 
 intents = discord.Intents.default()
 intents.members = True
@@ -44,8 +48,6 @@ client = Client(intents=intents)
 client.run(TOKEN)
 
 print(datetime.now())
-
-
 """
 Use cases (Heysen):
 
@@ -62,7 +64,6 @@ Use cases (Heysen):
 - Leer texto en voz alta.
     - revisar esto.
 """
-
 """
 VSCode
 Terminal
