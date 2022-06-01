@@ -1,9 +1,11 @@
 import discord
-from andres import random_groups, random_name
+from utils import random_groups, random_name
 from datetime import datetime
 
-
 TOKEN = "OTY2NTE2Nzc5ODQ3NDAxNTMy.YmC45Q.ix0BajepTYI6HiE0sghX3O3uC74"
+
+colors = ("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "Pink", "White", "Black")
+animals = ("Lobster", "Cat", "Duck", "Lizard", "Fish", "Bird", "Octopus", "Axolotl", "Fox", "Rooster")
 
 class Client(discord.Client):
     def get_members(self):

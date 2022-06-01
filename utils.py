@@ -1,8 +1,5 @@
 import random
 
-colors = ("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "Pink", "White", "Black")
-animals = ("Lobster", "Cat", "Duck", "Lizard", "Fish", "Bird", "Octopus", "Axolotl", "Fox", "Rooster")
-
 def randomC(colors):
     return random.choice(colors)
 
